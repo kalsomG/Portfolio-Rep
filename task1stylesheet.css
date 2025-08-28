@@ -1,0 +1,44 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+.topheader{
+    background-color: rgba(4, 244, 248, 0.853); 
+    text-align: center;
+    padding: 15px;
+}
+.title{
+    color: rgb(5, 27, 153);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 38px;
+    text-transform: uppercase;
+    text-shadow: 6px 3px 3px rgb(255, 255, 255);
+}
+h2{
+    padding: 5px 5px ;
+    margin: 8px 0px;
+    background-color: black;
+    color: white;
+    font-family: system-ui;
+    border: 4px solid #28f6f9;
+    border-radius: 6px;
+}
+.profimg img{
+    width: 200px;
+    aspect-ratio: 1/1;  
+    margin: 0px 18px;
+    object-fit: cover;
+    border: 3px dotted;
+}
+
+#hobbi{
+    padding: 0px 0px 10px 20px;
+}
+.footer{
+    background: #0c0c0c;
+    color: white;
+    min-height: 70px;
+    text-align: center;
+    padding: 20px;
+}
