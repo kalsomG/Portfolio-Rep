@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>JS Dark Light Mode</title>
+</head>
+<body>
+      <header style="background-color: blueviolet;  height: 70px;"></header>
+      <section>
+      <h1>Method A: Directly manipulating style property of elements</h1>
+      <p>This paragraph changes light and dark theme <br> Using directly style manipulation property</p>
+      <button onclick="light()">Light theme</button>
+      <button onclick="dark()">Dark theme</button>
+      </section>
+
+      <section>
+      <h1>Method B :Switching CSS Classes</h1>
+      <p>This paragraph changes light and dark theme <br> Using directly style manipulation property </p>
+      <button onclick="lightB()">Light theme</button>
+      <button onclick="darkB()">Dark theme</button>
+      </section>
+         
+
+<script>
+    
+    function light(){
+        document.querySelector("body").style.backgroundColor="white";
+         document.querySelector("body").style.color="black";
+    }
+    function dark(){
+       document.body.style.backgroundColor="black";
+        document.body.style.color="white";
+    }
+    function lightB(){
+        document.body.className="light-theme";
+    }
+    function darkB(){
+      document.body.className= "dark-theme";
+
+    }
+
+</script>
+</body>
+</html>
