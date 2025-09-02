@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Interactive Quiz Card</title>
+</head>
+<body>
+    
+    <h1>Simple Javascript program to show and hide text:</h1>
+    <div class="main">
+     <div class="quizcard">
+            <p> Question:A computer program that translates one statement of program instructions at a time into machine language is called?</p>
+     </div>
+     <button id="btn" style="padding: 4px;background-color: rgb(106, 103, 103);" onclick="hideandshow()">Show Answer</button>
+     <p id="ans" style="display: none;">Interpreter</p>
+    </div>
+        
+    <script>
+        
+
+     function hideandshow(){
+        let answer= document.getElementById("ans");
+        let butn= document.getElementById("btn");
+
+            if(answer.style.display === "none"){
+                butn.innerText="Hide Answer"
+                answer.style.display="block"
+            }
+            else{
+                butn.innerText="Show Answer";
+                answer.style.display="none";
+            }
+     }
+
+    </script>
+</body>
+</html>
