@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+.left-col{
+    position: relative;
+    border: 3px solid black;
+   background-image: url(bg-img.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    border-right-color:rgb(245, 242, 240) ;
+     
+}
+.left-col h1{
+    text-align: center;
+    color: goldenrod;
+   background-color: white;
+    border-bottom: 3px solid black;
+}
+
+.right-col{
+    position: relative;
+    background-image: url(bg-img2.jpg);
+    background-position: center;
+    background-size: cover;
+    border: 3px solid black;
+    border-left: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.right-col h1{
+    text-align: center;
+   color: goldenrod;
+   background-color: white;
+    border-bottom: 3px solid black;
+   
+}
+button{
+    margin: auto;
+    padding: 10px; 
+    position: relative;
+   border-style: none;
+    border-radius: 5px;
+    background-color: rgb(142, 37, 11);
+    z-index: 1;
+}
+a{
+    text-decoration: none;
+    color: wheat;
+    font-size: 15px;
+   font-weight: bold;
+}
+.signup{
+    padding: 10px 15px;
+}
+.left-col::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+     transition:  0.3s ease;
+}
+.left-col:hover::before{
+    background-color:rgb(8, 242, 242);
+    opacity: 50%;
+}
+.left-col:hover .learnbtn{
+    background-color: rgb(3, 14, 214);
+   outline: 2px solid white;
+   text-decoration: underline white;
+}
+
+.right-col::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+    transition:  0.3s ease;
+}
+.right-col:hover::before{
+    background-color:rgb(8, 242, 242);
+    opacity: 50%;
+}
+.right-col:hover .signup{
+    background-color: rgb(3, 14, 214);
+   outline: 2px solid white;
+   text-decoration: underline white;
+}
+/* stack verticaly on moblie*/
+@media (max-width: 768px) {
+      .grid-container{
+        grid-template-columns: 1fr;
+      }
+}
