@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    display: none;
+}
+
+.answer{
+    overflow: hidden;
+    max-height: 0px;
+    background-color: aqua;
+    margin: 5px;
+    transition: max-height 0.5s ease-in-out;
+    
+}
+.question{
+    display: block;
+    position: relative;
+    max-width: 500px;
+    margin: 5px;
+    padding: 5px;
+}
+
+label{
+    border: solid black;
+    padding: 3px;
+    display: block;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked~.answer{
+    max-height: 500px;
+    padding: 5px;
+}
+
