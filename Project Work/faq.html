@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Koel Cafe</title>
+ 
+</head>
+
+<body>
+
+    <nav class="navbar">
+            <li id="tab"><a href="index.html" >Home</a></li>
+            <li><a href="menu.html" >Menu</a></li>
+            <li><a href="specials.html">Specials</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li> 
+    </nav>
+  <div class="faq-container">
+    <div class="heading">🍴 Restaurant FAQs</div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q1">
+      <label for="q1" class="faq-question">What are your opening hours?</label>
+      <div class="faq-answer">
+        <p>We are open every day from <strong>10:00 AM to 11:00 PM</strong>. On weekends, we stay open until midnight.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q2">
+      <label for="q2" class="faq-question">Do you offer home delivery?</label>
+      <div class="faq-answer">
+        <p>Yes! We provide delivery through our website and apps like Foodpanda and UberEats.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q3">
+      <label for="q3" class="faq-question">Do you have vegetarian and vegan options?</label>
+      <div class="faq-answer">
+        <p>Absolutely! We offer a wide range of vegetarian and vegan dishes, prepared with fresh and organic ingredients.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q4">
+      <label for="q4" class="faq-question">Do I need a reservation?</label>
+      <div class="faq-answer">
+        <p>Reservations are not required, but recommended on weekends and holidays for the best experience.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q5">
+      <label for="q5" class="faq-question">Do you host private events?</label>
+      <div class="faq-answer">
+        <p>Yes, we host private parties, birthdays, and corporate gatherings with special catering options.</p>
+      </div>
+    </div>
+  </div>
+
+<span class="buttons"><button onclick="light()" style="border: solid black;">Light theme</button>
+<button onclick="dark()" style="background: black; color: white; border: solid white;">Dark theme</button></span>
+
+<footer>
+<div class="footer">
+  <p> © 2025 Koel Cafe: All Rights Reserved.</p>
+
+<p><a href="https://www.instagram.com/yourusername" target="_blank">
+      <i class="fab fa-instagram" style="font-size: 20px;"></i>
+ Follow us on Instagram
+      </a></p>
+</div>
+</footer>
+ 
+<script>
+ function light(){
+        document.querySelector(".faq-container").style.background=" rgba(255, 255, 255, 0.624)";
+         document.querySelector(".heading").style.color="black";
+    }
+function dark(){
+       document.querySelector(".faq-container").style.background="rgba(0, 0, 0, 0.6) ";
+      document.querySelector(".heading").style.color="#FFD54F";
+    }
+
+</script>
+
+</body>
+</html>

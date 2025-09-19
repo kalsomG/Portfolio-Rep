@@ -1,0 +1,340 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+      font-family: "Poppins", sans-serif;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("bgimg1.webp") no-repeat center center/cover;
+      z-index: -1;
+    }
+.navbar{
+    background-color: rgb(246, 202, 7);
+    width: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 15px 0px;
+    gap: 18px;
+    z-index: 1000;
+    border-bottom: 12px solid black;
+}
+
+.navbar li{
+    list-style-type: none;
+     
+}
+
+.navbar a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: all 0.3s ease;
+}
+ .navbar a:hover {
+      color: blue;
+      text-decoration: underline;
+    transition: background-color .3s ease;
+}
+
+.home-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+   box-sizing: border-box;
+   margin-top: 60px;
+}
+
+.left-col{
+    position: relative;
+    background-image: url(bgimg2.webp);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     
+}
+.left-col h1{
+     background-color:rgb(246, 178, 7);
+     border-radius: 17px;
+     text-align: center;
+    padding: 7px;
+    color:rgb(0, 0, 0);
+   text-shadow: 2px 2px 2px rgb(142, 37, 11);
+    font-weight: bolder;
+     font-size: 35px;
+ 
+}
+.left-col::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: 0.3s ease;
+    background: transparent;
+}
+.left-col:hover::before{
+    background-color: white;
+    opacity: 70%;
+}
+.left-col:hover .learnbtn{
+    background-color:white;
+   outline: 2px solid black;
+   text-decoration: underline black;
+}
+.right-col{
+    position: relative;
+    background-image: url(bgimg1.webp);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-col h1{
+    background-color:rgb(246, 178, 7);
+     border-radius: 17px;
+    padding: 7px 17px;
+    color:rgb(0, 0, 0);
+   text-shadow: 2px 2px 2px rgb(142, 37, 11);
+    font-weight: bolder;
+     font-size: 35px;
+}
+.right-col::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition:  0.3s ease;
+    background: transparent;
+}
+.right-col:hover::before{
+    background-color: white;
+    opacity: 70%;
+}
+.right-col:hover .signup{
+   background-color:white;
+   outline: 2px solid black;
+   text-decoration: underline black;
+}
+button{
+    margin-top: 20px;
+    padding: 10px; 
+    position: relative;
+    border-style: none;
+    border-radius: 15px;
+    background-color: white;
+    z-index: 1;
+}
+button a{
+    text-decoration: none;
+    color:red;
+    font-size: 18px;
+   font-weight: bold;
+}
+
+/* MENU PAGE */
+.menu-page{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap:2px;
+padding: 2px;
+background-color: rgba(125, 123, 123, 0.765);
+margin-top: 60px;
+}
+.menu-page img{
+ width:100%;
+ height: 100%;
+ display: block;
+ object-fit: cover;
+ border-radius: 33px;
+ transition: transform 0.3 ease;
+}
+.menu-page img:hover{
+    cursor: pointer;
+    opacity: 60%;
+}
+
+
+/* CONTACT PAGE */
+.contact-page{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6) ;
+}
+.buttons{
+position: fixed;  /* stays at bottom-right of viewport */
+  right: 1%;
+  bottom: 6%;
+  display: flex;
+  gap: 10px;
+}
+.buttons button{
+    width: 50px;       /* equal width & height */
+  height: 50px;
+   padding: 5px;
+    border-radius: 50%;
+}
+#emailform{
+    background-color: rgba(244, 183, 30, 0.716);
+    padding: 15px;
+    height: auto;
+    font-weight: bold;
+    text-align: center;
+}
+
+#email{
+    padding: 5px;
+}
+.submit-but{
+  padding: 5px;
+   border-radius: 5px;
+   border-bottom-style: solid;
+}
+.submit-but:hover{
+    background-color: green;
+   transform: translateY(-3px);
+      box-shadow: 0 6px 10px rgba(17, 17, 17, 0.497);
+}
+.valid{
+    border:3px solid green;
+}
+.invalid{
+    border:2px solid rgba(212, 2, 2, 0.902);
+    border-radius: 2px;
+}
+
+
+/*Specials Page*/
+
+.specials-page{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   background: rgba(0, 0, 0, 0.6) ;
+}
+.heading {
+      text-align: center;
+      padding: 20px;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #FFD54F; 
+      margin-bottom: 20px;
+    }
+.card{
+    height: auto;
+    background-color: rgba(244, 183, 30, 0.716);;
+    border-radius: 5px;
+    min-width: 50vh;
+    padding: 10px;
+    text-align: center;
+}
+/*Faq Page*/
+
+    
+    .faq-container {
+      width: 100%;
+      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.6); 
+      margin-top: 60px;
+    }
+
+
+    .faq-item {
+      margin: 0 auto 10px auto;
+      max-width: 900px;
+      border-bottom: 1px solid #333;
+      border-radius: 6px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .faq-question {
+      display: block;
+      padding: 20px;
+      font-size: 1.2em;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      color: #FFD54F;
+      background: #111;
+      transition: background 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background: #1c1c1c;
+    }
+
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      transition: transform 0.3s, color 0.3s;
+      color: #FFD54F;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s ease;
+      background: rgba(0, 0, 0, 0.8);
+      font-size: 1em;
+      line-height: 1.6;
+      color: #f0f0f0;
+      padding: 0 20px;
+    }
+
+    input[type="checkbox"]:checked ~ .faq-answer {
+      max-height: 200px;
+      padding: 20px;
+    }
+
+    input[type="checkbox"]:checked + .faq-question::after {
+      content: '–';
+      transform: rotate(180deg);
+      color: #FFD54F;
+    }
+
+.footer {
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  max-height: 91px; ;
+}
+.footer a:hover {
+      color: #E4405F; /* Instagram pink */
+    }
+/* small tweak for mobile rule in your media query */
+@media (max-width: 768px) {
+  .home-page,.menu-page{
+    grid-template-columns: 1fr;
+  }
+
+}
+

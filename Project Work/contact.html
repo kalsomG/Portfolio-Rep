@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Koel Cafe</title>
+</head>
+
+<body>
+    <nav class="navbar">
+            <li id="tab" ><a href="index.html" data-target="home">Home</a></li>
+            <li><a href="menu.html" data-target="menu">Menu</a></li>
+            <li><a href="specials.html">Specials</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li> 
+    </nav>
+
+<div class="contact-page">
+     <h3 class="heading" style="font-size: 2.0rem;">Please fill the Reservation form</h3>
+<form id="emailform" >
+<label for="email">Enter your email:</label> 
+  <input id="email" name="email" value="" placeholder="enter your email adress">
+  <br><button type="submit" class="submit-but">Submit</button>
+  <p id="error" style=" display: none; color: red; font-size: 14px; ">Please enter a valid email address</p>
+
+</form>
+</div>
+
+<span class="buttons"><button onclick="light()" style="border: solid black;">Light theme</button>
+<button onclick="dark()" style="background: black; color: white; border: solid white;">Dark theme</button></span>
+
+
+<footer>
+<div class="footer">
+  <p> © 2025 Koel Cafe: All Rights Reserved.</p>
+<p> <a href="https://www.instagram.com/yourusername" target="_blank">
+      <i class="fab fa-instagram" style="font-size: 20px;"></i>
+ Follow us on Instagram
+      </a></p>
+</div>
+</footer>
+
+
+<script>
+
+ function light(){
+        document.querySelector(".contact-page").style.background=" rgba(255, 255, 255, 0.624)";
+         document.querySelector(".heading").style.color="black";
+    }
+function dark(){
+       document.querySelector(".contact-page").style.background="rgba(0, 0, 0, 0.6) ";
+      document.querySelector(".heading").style.color="#FFD54F";
+    }
+
+
+const email=document.getElementById("email");
+const error=document.getElementById("error");
+const form=document.getElementById("emailform");
+/* Prevents form submission*/
+form.addEventListener("submit",function(event){
+    if(!email.value.includes("@")){
+      event.preventDefault();
+     error.style.display="block";
+     email.classList.add("invalid");
+    }
+});
+
+/* clears error when user inputs again*/
+email.addEventListener("input",clear);
+function clear(){
+      error.style.display="none";
+      email.classList.remove("invalid");
+  }
+
+
+</script>
+</body>
+</html>
